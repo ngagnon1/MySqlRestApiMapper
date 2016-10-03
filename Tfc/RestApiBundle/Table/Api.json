@@ -1,0 +1,13 @@
+{
+  "Api": {
+    "GetSet": {
+      "ObjSet": "->getSetObjSet",
+      "Definition": "->getSetApiDefinition",
+      "Members": "->getMembers"
+    },
+    "GetSingle": {
+      "Definition": "->getSingleApiDefinition",
+      "Members": "->getMembers"
+    }
+  }
+}

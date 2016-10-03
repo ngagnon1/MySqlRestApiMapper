@@ -1,0 +1,32 @@
+api_all:
+    path:     /api/v1/{type}
+    defaults: { _controller: TfcRestApiBundle:Api:all, _format: ~ }
+    requirements: 
+      _methods: GET
+
+api_view:
+    path:     /api/v1/{type}/{id}
+    defaults: { _controller: TfcRestApiBundle:Api:get, _format: ~ }
+    requirements: 
+      _method: GET
+      id: "\d+"
+
+api_new:
+    path:     /api/v1/{type}
+    defaults: { _controller: TfcRestApiBundle:Api:new, _format: ~ }
+    requirements: 
+      _method: POST
+
+api_update:
+    path:     /api/v1/{type}/{id}
+    defaults: { _controller: TfcRestApiBundle:Api:update, _format: ~ }
+    requirements: 
+      _method: PATCH|PUT
+      id: "\d+"
+
+api_delete:
+    path:     /api/v1/{type}/{id}
+    defaults: { _controller: TfcRestApiBundle:Api:delete, _format: ~ }
+    requirements: 
+      _method: DELETE
+      id: "\d+"
